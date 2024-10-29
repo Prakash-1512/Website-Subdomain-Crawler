@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #f5f5f5;
+margin: 0;
+padding: 0;
+}
+header {
+background-color: #007BFF;
+color: #fff;
+padding: 20px;
+text-align: center;
+}
+form {
+background-color: #fff;
+padding: 20px;
+margin: 20px;
+border-radius: 5px;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+pre {
+white-space: pre-line;
+}
+
+7
+
+</style>
+</head>
+<body>
+<header>
+<h1>Subdomain Checker</h1>
+</header>
+<form method="POST">
+<center>
+<label for="url">URL:</label>
+<input type="text" id="url" name="url" required>
+<input type="submit" value="Check Subdomains">
+</center>
+</form>
+<center>
+{% if subdomain_list %}
+<div class="result">
+<h2>Subdomains found:</h2>
+<pre>{{ subdomain_list }}</pre>
+</div>
+{% else %}
+<center>
+<div class="result">
+<h2>No subdomains found.</h2>
+</div>
+</center>
+{% endif %}</center>
+</body>
+</html>
+
+8
+""", subdomain_list=subdomain_list)
+else:
+return "No subdomains found."
+
+return '''
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #f5f5f5;
+margin: 0;
+padding: 0;
+}
+header {
+background-color: #007BFF;
+color: #fff;
+padding: 20px;
+text-align: center;
+}
+form {
+background-color: #fff;
+padding: 20px;
+margin: 20px;
+border-radius: 5px;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+9
+
+</style>
+</head>
+<body>
+<header>
+<h1>Subdomain Checker</h1>
+</header>
+<form method="POST">
+<center>
+<label for="url">URL:</label>
+<input type="text" id="url" name="url" required>
+<input type="submit" value="Check Subdomains">
+</center>
+</form>
+</body>
+</html>
